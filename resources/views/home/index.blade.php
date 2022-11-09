@@ -1,21 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Celsy Fitness Center Bandung</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    @vite('public/css/app.css')
 </head>
+
 <body>
-    Ini halaman Home
-<a href="/login">Login</a>
-<form action="/register" method="post">
-    @csrf
-    Nama Lengkap: <input type="text" name="name"> <br>
-    Nama Pengguna: <input type="text" name="username"> <br>
-    Email: <input type="email" name="email"> <br>
-    Kata Sandi: <input type="password" name="password"> <br>
-    <button type="sumbit">Submit</button>
-</form>
+    <div class="bg-[url('../../public/img/background.jpg')] bg-cover bg-repeat bg-center">
+        <div class="container">
+            <div class="flex items-center justify-center md:h-screen">
+                <div class="bg-slate-600 rounded-xl text-white shadow-lg md:w-1/2 h-fit py-10 my-10 border-yellow-300 border-2">
+                    <div class="w-full mb-10">
+                        <h1 class="text-4xl text-center mb-3 font-orbitron font-extrabold">
+                            <span class="text-yellow-300">Celsy</span> Fitness Centre
+                        </h1>
+                        <h2 class="text-center text-md font-semibold">Registrasi Akun</h2>
+                    </div>
+    
+                    <form action="/register" method="post">
+                        @csrf
+                        <div class="flex flex-wrap">
+                            <div class="w-full md:w-1/2 px-5">
+                                <div class="mb-6">
+                                    <label for="name" class="block mb-2 text-sm font-medium">Nama Lengkap</label>
+                                    <input type="text" id="name" name="name"
+                                        class="input"
+                                        required>
+                                </div>
+                                <div class="mb-6">
+                                    <label for="username" class="block mb-2 text-sm font-medium">Nama Pengguna</label>
+                                    <input type="text" id="username" name="username"
+                                        class="input"
+                                        required>
+                                </div>
+                            </div>
+    
+                            <div class="w-full md:w-1/2 px-5">
+                                <div class="mb-6">
+                                    <label for="email" class="block mb-2 text-sm font-medium">Email</label>
+                                    <input type="email" id="email" name="email"
+                                        class="input"
+                                        placeholder="nama@email.com" required>
+                                </div>
+                                <div class="mb-6">
+                                    <label for="password" class="block mb-2 text-sm font-medium">Kata Sandi</label>
+                                    <input type="password" id="password" name="password"
+                                        class="input"
+                                        required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid w-full place-items-center">
+                            <button type="submit"
+                                class="border bg-yellow-300 px-3 py-2 rounded-xl font-bold mb-3 text-sm hover:bg-yellow-500">Submit</button>
+                            <h2 class="text-center text-sm font-semibold">Sudah punya akun? <a href="/login"
+                                    class="text-yellow-300 hover:underline">Login</a></h2>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    @vite('public/js/app.js')
 </body>
+
 </html>
