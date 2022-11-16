@@ -57,12 +57,13 @@
                                         class="input"
                                         required>
                                 </div>
+                                <input type="hidden" value="0" name="log_in">
                             </div>
                         </div>
                         <div class="grid w-full place-items-center">
                             <button type="submit"
                                 class="border bg-yellow-300 px-3 py-2 rounded-xl font-bold mb-3 text-sm hover:bg-yellow-500">Submit</button>
-                            <h2 class="text-center text-sm font-semibold">Sudah punya akun? <a href="/login"
+                            <h2 class="text-center text-sm font-semibold">Sudah punya akun? <a href="{{ route('login') }}"
                                     class="text-yellow-300 hover:underline">Login</a></h2>
                         </div>
                     </form>
