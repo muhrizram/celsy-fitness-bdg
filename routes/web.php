@@ -41,10 +41,14 @@ Route::controller(LoginController::class)->group(function(){
 
 Route::group(['middleware' => ['auth']], function(){
     Route::group(['middleware' => ['checkUserLogin:0']], function(){
-        Route::view('welcome', 'firstTime.index');
+        Route::view('welcome', 'firstTime.index', [
+            "title" => "Welcome"
+        ]);
     });
     Route::group(['middleware' => ['checkUserLogin:1']], function(){
-        Route::view('biodata', 'biodata.index');
+        Route::view('biodata', 'biodata.index', [
+            "title" => "Biodata"
+        ]);
     });
     Route::group(['middleware' => ['checkUserLogin:2']], function(){
         Route::view('dashboard', 'dashboard.index');

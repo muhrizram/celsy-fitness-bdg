@@ -17,7 +17,9 @@ class LoginController extends Controller
                 return redirect()->intended('dashboard');
             }
         }
-        return view('login.index');
+        return view('login.index', [
+            "title" => "Login"
+        ]);
     }
 
     public function authenticate(Request $request){
@@ -45,9 +47,16 @@ class LoginController extends Controller
     }
 
     public function logout(Request $request){
+        $user = Auth::user();
+        if($user->log_in == '0') {
+            Auth::logout();
+            $request->session()->invalidate();
+            $request->session()->regenerateToken();
+            return redirect()->intended('login')->with(['info' => 'Akunmu sudah terdaftar namun belum diaktivasi.']);
+        }
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect('/');
+        return redirect('login');
     }
 }
