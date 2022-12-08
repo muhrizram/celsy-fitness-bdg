@@ -10,3 +10,7 @@ body {
     @apply shadow-sm-light border-gray-300 border-2 text-slate-900 text-sm rounded-lg focus:ring-yellow-300 focus:border-yellow-300 block w-full p-2.5;
 }
 
+.radio-btn {
+    @apply w-4 h-4 text-yellow-300 bg-gray-100 border-gray-300 focus:ring-yellow-400;
+}
+

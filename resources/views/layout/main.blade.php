@@ -14,9 +14,11 @@
     @vite('public/css/app.css')
 </head>
 
-<body>
+<body class="bg-[url('../../public/img/background.jpg')] bg-cover bg-center">
     @yield('container')
-    @vite('public/js/app.js')
+    @vite('node_modules/flowbite/dist/flowbite.js')
+    @vite('node_modules/flowbite/dist/datepicker.js')
+    <script src="{{ asset('js/biodata.js') }}"></script>
 </body>
 
 </html>

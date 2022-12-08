@@ -5,7 +5,7 @@
     <div class="container">
         <div class="flex items-center justify-center h-screen">
             <div
-                class="bg-slate-600 rounded-xl text-white shadow-lg lg:w-1/2 w-fit h-fit py-10 my-10 border-yellow-300 border-2">
+                class="bg-slate-600 rounded-xl text-white shadow-lg lg:w-1/2 w-fit h-fit py-10 my-20 border-yellow-300 border-2">
                 <div class="w-full mb-10 md:px-10">
                     <h1 class="text-4xl text-center mb-3 font-orbitron font-extrabold">
                         <span class="text-yellow-300">Celsy</span> Fitness Centre
