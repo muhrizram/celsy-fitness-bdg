@@ -22,7 +22,7 @@ class CheckUserLogin
         }
 
         $user = Auth::user();
-        if($user->log_in == $rules){
+        if($user->level == $rules){
             return $next($request);
         }
 
