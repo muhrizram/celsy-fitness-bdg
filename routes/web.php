@@ -42,7 +42,6 @@ Route::controller(LoginController::class)->group(function(){
     Route::post('logout','logout')->name('logout');
 });
 
-Route::resource('/exercises', \App\Http\Controllers\ExerciseController::class);
 
 Route::group(['middleware' => ['auth']], function(){
     // Route::group(['middleware' => ['checkUserLogin:0']], function(){
@@ -67,5 +66,7 @@ Route::group(['middleware' => ['auth']], function(){
         //     Route::post('/proses_tambah_makanan','store')->name('proses_tambah_makanan');
         //     Route::get('/ubah_makanan/{id}','edit');
         // // });
+        Route::resource('/exercises', \App\Http\Controllers\ExerciseController::class);
+        Route::resource('/food', \App\Http\Controllers\FoodController::class);
     });
 });

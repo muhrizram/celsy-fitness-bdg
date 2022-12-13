@@ -39,7 +39,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/makanan"
+                            <a href="{{ route('food.index') }}"
                                 class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg  hover:bg-red-500 {{ $active === 'makanan' ? 'bg-red-500 hover:bg-red-500' : '' }}">
                                 <svg aria-hidden="true"
                                     class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
