@@ -23,12 +23,12 @@
                     <a href="#" id="logoSidebar" class="flex items-center pl-2.5 mb-5">
                         <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-6 sm:h-7"
                             alt="Flowbite Logo">
-                        <span class="self-center md:flex hidden text-xl font-semibold whitespace-nowrap" id="NavWord">Flowbite</span>
+                        <span class="self-center md:flex hidden text-xl font-extrabold font-orbitron" id="NavWord">Celsy Fitness</span>
                     </a>
                     <ul class="space-y-2">
                         <li>
                             <a href="{{ route('dashboard') }}"
-                                class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-red-500 {{ $active === 'dashboard' ? 'bg-red-500 hover:bg-red-500' : '' }}">
                                 <svg aria-hidden="true"
                                     class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
                                     fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -68,15 +68,15 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#"
-                                class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                            <a href="{{ route('pengguna_aplikasi.index') }}"
+                                class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-red-500 {{ $active === 'user_data' ? 'bg-red-500 hover:bg-red-500' : '' }}">
                                 <svg aria-hidden="true"
                                     class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
                                     fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
                                         clip-rule="evenodd"></path>
                                 </svg>
-                                <span class="md:flex hidden ml-3 whitespace-nowrap" id="NavWord">Users</span>
+                                <span class="md:flex hidden ml-3 whitespace-nowrap" id="NavWord">User Data</span>
                             </a>
                         </li>
                         <li>
@@ -96,7 +96,7 @@
                             <form action="{{ route('logout') }}" method="post">
                                 @csrf
                                 <button type="submit"
-                                    class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-red-500 w-full">
                                     <svg aria-hidden="true"
                                         class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
                                         fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">

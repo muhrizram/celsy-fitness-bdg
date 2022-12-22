@@ -68,5 +68,6 @@ Route::group(['middleware' => ['auth']], function(){
         // // });
         Route::resource('/exercises', \App\Http\Controllers\ExerciseController::class);
         Route::resource('/food', \App\Http\Controllers\FoodController::class);
+        Route::resource('/pengguna_aplikasi', \App\Http\Controllers\UserDataController::class);
     });
 });

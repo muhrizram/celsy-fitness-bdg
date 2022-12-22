@@ -12,7 +12,8 @@ module.exports = {
       padding: '16px'
     },
     fontFamily: {
-      orbitron: ['Orbitron']
+      orbitron: ['Orbitron'],
+      roboto: ['Roboto']
     },
     extend: {},
   },

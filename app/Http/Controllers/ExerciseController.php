@@ -9,10 +9,8 @@ class ExerciseController extends Controller
 {
     public function index()
     {
-        //get posts
         $exercises = Exercise::latest()->paginate(5);
 
-        //render view with posts
         return view('dashboard.exercise.index', [
             'title' => 'Latihan',
             'active' => 'latihan',
